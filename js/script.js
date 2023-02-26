@@ -1,24 +1,26 @@
 
-let countText = document.getElementById('counter');
+let counterCase = document.querySelectorAll('.counter')
+console.log(counterCase)
 
-let numStor = Number(countText.dataset.num)  ;
+let getNum = Array.from(counterCase)
 
-console.log(numStor)
+getNum.map(item =>{
+    console.log(item.dataset.number)
 
-let runin = 0;
-function autoCount(){
-    runin ++;
-   
-    countText.innerHTML =  `${runin} %`
-    if(runin === numStor) {
-        clearInterval(stop)
+    let counterStart = 0;
+
+    function counterUp(){
+        counterStart ++;
+        item.innerHTML = `${counterStart} +`
+
+        if(counterStart == item.dataset.number){
+            clearInterval(stop)
+        }
+
     }
-}
 
-
-
-
-let stop = setInterval(()=>{
-    autoCount()
-},20)
-
+   let stop = setInterval(()=>{
+        counterUp()
+    },13)
+    
+})

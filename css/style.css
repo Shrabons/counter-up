@@ -6,7 +6,7 @@
 
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background: rgb(255, 200, 0);
+  background: #bdc3c7;
 }
 .container {
   width: 80%;
@@ -29,7 +29,12 @@ body {
 .couter__up .counter__main .counter__item i {
   font-size: 60px;
 }
-
+.couter__up .counter__main .counter__item span {
+  font-size: 40px;
+  margin: 20px 0;
+  display: block;
+  color: #8e44ad;
+}
 .couter__up .counter__main .counter__item h3 {
   font-size: 26px;
   margin: 10px 0;
